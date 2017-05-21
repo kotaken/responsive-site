@@ -3,12 +3,12 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #4c4c4c;
+  color: #100F1C;
   font-size: 1.4rem;
   font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.1em;
-  background-color: #fdfcf6; }
+  background-color: #F0F2B8; }
 
 /* Align
 ------------------------------------------------------------*/
@@ -19,7 +19,8 @@ body {
 ------------------------------------------------------------*/
 .block-center,
 section .container,
-footer .button {
+footer .button,
+#service i {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -31,6 +32,9 @@ footer .button {
 
 /* Header
 ------------------------------------------------------------*/
+.header-img {
+  position: relative; }
+
 header img {
   width: 100%; }
 
@@ -44,38 +48,61 @@ section {
     font-size: 3.2rem; }
 
 #service {
-  background-color: #fdfcf6; }
+  background-color: #F0F2B8; }
   #service .container {
     display: -webkit-flex;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
   #service h2 {
     margin-bottom: 60px;
-    color: #4c4c4c; }
+    color: #100F1C; }
+  #service i {
+    font-size: 4.5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    text-align: center; }
   #service .service-box {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     -webkit-flex: 1;
     flex: 1;
-    margin: 0px 10px;
+    margin: 10px 0px;
     padding: 20px;
-    background-color: #bea300; }
+    background-color: #B1DACF; }
 
 /* Footer
 ------------------------------------------------------------*/
-footer {
+footer#container {
   padding: 30px 0px; }
-  footer .button {
+  footer#container .button {
     width: 200px;
     font-size: 20px;
     text-decoration: none;
     display: block;
     text-align: center;
-    color: #FFFFFF;
-    background: #008DDD;
+    color: #100F1C;
+    background: #B1DACF;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px; }
+
+/* Desktop
+------------------------------------------------------------*/
+@media (min-width: 769px) {
+  #service .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #service .service-box {
+    margin: 0px 10px; } }
 
 /*# sourceMappingURL=style.css.map */

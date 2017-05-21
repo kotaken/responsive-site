@@ -4,10 +4,10 @@
 $baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // colors
-$baseColor: #fdfcf6;
-$subColor: #bea300;
-$keyColor: #14c0c9;
-$fontColor: #4c4c4c;
+$baseColor: #F0F2B8;
+$subColor: #B1DACF;
+$keyColor: #D7E8F2;
+$fontColor: #100F1C;
 
 
 html{font-size: 62.5%;} // ベースとなるフォントサイズの定義
@@ -31,7 +31,8 @@ body{
 ------------------------------------------------------------*/
 .block-center,
 section .container,
-footer .button
+footer .button,
+#service i
 {
   display: block;
   margin-left: auto;
@@ -47,6 +48,12 @@ footer .button
 
 /* Header
 ------------------------------------------------------------*/
+.header-img{
+    position: relative;
+    
+}
+
+
 header img{
     width: 100%;
 }
@@ -70,16 +77,27 @@ section{
         display: -webkit-flex;
         display: flex;
         justify-content: space-between;
+        @include flex-direction(column); //コラムを縦に並べる
+        
+        
     }
     h2{
         margin-bottom: 60px;
         color: $fontColor;
     }
+    i{
+        font-size: 4.5em;
+        @include box-sizing(border-box);
+        width: 80px;
+        height: 80px;
+        text-align: center;
+    }
     .service-box{
         @include box-sizing(border-box);
+        @include border-radius(5px);
         -webkit-flex: 1;
         flex: 1;
-        margin: 0px 10px;
+        margin: 10px 0px;
         padding: 20px;
         
         background-color: $subColor;
@@ -91,17 +109,37 @@ section{
 /* Footer
 ------------------------------------------------------------*/
 footer{
+    
+    &#container{
+            
     padding: 30px 0px;
-   
+        
+        
         .button {
             width:200px;
             font-size: 20px;
             text-decoration: none;
             display: block;
             text-align: center;
-            color: #FFFFFF;
-            background: #008DDD;
+            color: $fontColor;
+            background: $subColor;
             @include border-radius(5px);
-     }
+        }
+    }
 }
 
+/* Desktop
+------------------------------------------------------------*/
+@media (min-width :769px){
+    //Service
+    #service{
+        .container{
+            @include flex-direction(row); //横並びにする
+            justify-content: space-between;
+        }
+        .service-box{
+            margin: 0px 10px; //横方向のマージンを取る
+        }
+    }
+    
+}
