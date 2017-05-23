@@ -32,10 +32,11 @@ footer .button,
 
 /* Header
 ------------------------------------------------------------*/
-.header-img {
-  position: relative; }
-
-header img {
+header .header-img {
+  background-image: url("../img/image_top.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
   width: 100%; }
 
 /* Main Section
@@ -98,6 +99,9 @@ footer#container {
 /* Desktop
 ------------------------------------------------------------*/
 @media (min-width: 769px) {
+  header .header-img {
+    height: 500px; }
+
   #service .container {
     -webkit-flex-direction: row;
     flex-direction: row;

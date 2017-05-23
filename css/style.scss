@@ -48,13 +48,14 @@ footer .button,
 
 /* Header
 ------------------------------------------------------------*/
-.header-img{
-    position: relative;
+header .header-img{
+    background :{ 
+        image: url("../img/image_top.jpg");
+        size: cover;
+        position: center center;
+    }
     
-}
-
-
-header img{
+    height: 250px;
     width: 100%;
 }
 
@@ -131,6 +132,12 @@ footer{
 /* Desktop
 ------------------------------------------------------------*/
 @media (min-width :769px){
+    
+    //Header
+    header .header-img{
+        height: 500px;
+    }
+    
     //Service
     #service{
         .container{
